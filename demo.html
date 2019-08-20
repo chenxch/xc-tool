@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="./js/orderBy/orderBy.js"></script>
+</head>
+<body>
+
+<h1>F12</h1>
+<p id="demo"></p>
+<script>
+var  x = [
+	{
+    	time:100,
+        num:1,
+        id:6
+    },
+    {
+    	time:100,
+        num:10,
+        id:4
+    },
+    {
+    	time:200,
+        num:1,
+        id:10
+    },
+    {
+    	time:100,
+        num:1,
+        id:1
+    }
+];
+let orders = [
+	{
+		col:'num',
+		isAsc: false
+	},
+	{
+		col:'time',
+		isAsc: false
+	},
+	{
+		col:'id',
+		isAsc: true
+	}
+]
+x = orderBy(x,orders);
+console.log(x);
+</script>
+
+</body>
+</html>
